@@ -79,23 +79,7 @@ def more_menu():
 def start_game():
     setup()
     story()
-    while my_player.game_over is False:
-        option = input("> ").lower()
-        if option == "m":
-            os.system("clear")
-            show_map()
-        elif option in ["w", "a", "s", "d"]:
-            os.system("clear")
-            movement(option)
-        elif option == "i":
-            os.system("clear")
-            inspect()
-        elif option == "q":
-            quest()
-        elif option == "h":
-            os.system("clear")
-            title_menu = False
-            help_menu(title_menu)
+    #hotkeys()
 
 ##### GAME START #####
 title_menu_options()

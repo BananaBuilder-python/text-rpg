@@ -40,30 +40,28 @@ def quest():
     print(f"Current Quest: {my_player.quest}")
 
 def hotkeys():
-    while my_player.game_over is False:
-        option = input("> ").lower()
-        if option == "m":
-            os.system("clear")
-            show_map()
-        elif option in ["w", "a", "s", "d"]:
-            os.system("clear")
-            movement(option)
-        elif option == "i":
-            os.system("clear")
-            inspect()
-        elif option == "q":
-            quest()
-        elif option == "h":
-            os.system("clear")
-            print("#################################")
-            print("#            Help Menu          #")
-            print("#################################")
-            print("- Read carefully, and choose wisely")
-            print("- Type your choice and click enter")
-            print("- Type w, a, s, d to move in a direction")
-            print("- Type m to view the map")
-            print("- Type i to interact")
-            print("- Type q to view active quest")
-            print("- Good luck and have fun!")
-            print("- Type exit to resume")
-            
+    option = input("> ").lower()
+    if option == "m":
+        os.system("clear")
+        show_map()
+    elif option in ["w", "a", "s", "d"]:
+        os.system("clear")
+        movement(option)
+    elif option == "i":
+        os.system("clear")
+        inspect()
+    elif option == "q":
+        quest()
+    elif option == "h":
+        os.system("clear")
+        print("#################################")
+        print("#            Help Menu          #")
+        print("#################################")
+        print("- Read carefully, and choose wisely")
+        print("- Type your choice and click enter")
+        print("- Type w, a, s, d to move in a direction")
+        print("- Type m to view the map")
+        print("- Type i to interact")
+        print("- Type q to view active quest")
+        print("- Good luck and have fun!")
+        print("- Type exit to resume")
